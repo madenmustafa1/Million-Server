@@ -1,0 +1,91 @@
+@BASE_URL = http://localhost:3000/api
+
+GET {{BASE_URL}}
+
+###
+GET  {{BASE_URL}}/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYxYTUzZjM5YmU4OTNkZjQyOWIxZDEiLCJpYXQiOjE2MjY0NDkyMjMsImV4cCI6MTYyNjQ1MjgyM30.ETl-uT8ujqThINgfNDhHIcA1c2g3C-Q-yztq8PK-_gU
+###
+GET  {{BASE_URL}}/users/52
+
+###
+POST  {{BASE_URL}}/users
+Content-Type: application/json
+
+{
+    "isim": "a1sdddsa",
+    "email": "1d2dsds@gmail.com",
+    "userName": "mdfdsda",
+    "sifre": "123456"
+}
+
+
+###
+POST  {{BASE_URL}}/users/register
+Content-Type: application/json
+
+{
+    "email": "1d2dsds@gmail.com",
+    "password": "123456",
+    "gender": "male",
+    "userName": "madenmustafa"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+PATCH   {{BASE_URL}}/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYxYTUzZjM5YmU4OTNkZjQyOWIxZDEiLCJpYXQiOjE2MjY0NDkyMjMsImV4cCI6MTYyNjQ1MjgyM30.ETl-uT8ujqThINgfNDhHIcA1c2g3C-Q-yztq8PK-_gU
+
+{
+    "isim": "maden2sd",
+    "sifre": "123456"
+}
+
+
+
+###
+PATCH   {{BASE_URL}}/users/60f1a53f39be893df429b1d1
+Content-Type: application/json
+
+{
+    "isim": "maden22",
+    "sifre": "123456"
+}
+
+###
+DELETE  {{BASE_URL}}/users/60eae440623deb2e8c92f5fa
+Content-Type: application/json
+
+
+###
+DELETE  {{BASE_URL}}/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYxM2I4YmM5NjhhYzE2MjAzYmNiYjkiLCJpYXQiOjE2MjY0MjI1NjYsImV4cCI6MTYyNjQyNjE2Nn0.hNcdkNvUWYz3Fg0_SsmY9Keafkakm7UkNSFZOuWImak
+
+###
+GET  {{BASE_URL}}/users/deleteAll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYxYTUzZjM5YmU4OTNkZjQyOWIxZDEiLCJpYXQiOjE2MjY0NDkyMjMsImV4cCI6MTYyNjQ1MjgyM30.ETl-uT8ujqThINgfNDhHIcA1c2g3C-Q-yztq8PK-_gU
