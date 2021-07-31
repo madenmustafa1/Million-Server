@@ -1,34 +1,50 @@
 @BASE_URL = http://localhost:3000/api
 
-GET {{BASE_URL}}
 
+// LOGIN
 ###
-GET  {{BASE_URL}}/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYxYTUzZjM5YmU4OTNkZjQyOWIxZDEiLCJpYXQiOjE2MjY0NDkyMjMsImV4cCI6MTYyNjQ1MjgyM30.ETl-uT8ujqThINgfNDhHIcA1c2g3C-Q-yztq8PK-_gU
-###
-GET  {{BASE_URL}}/users/52
-
-###
-POST  {{BASE_URL}}/users
+POST  {{BASE_URL}}/users/login
 Content-Type: application/json
 
 {
-    "isim": "a1sdddsa",
-    "email": "1d2dsds@gmail.com",
-    "userName": "mdfdsda",
-    "sifre": "123456"
+    "email": "1234@gmail.com",
+    "password": "123456"
 }
 
-
+// REGISTER
 ###
 POST  {{BASE_URL}}/users/register
 Content-Type: application/json
 
 {
-    "email": "1d2dsds@gmail.com",
+    "email": "1234@gmail.com",
     "password": "123456",
+    "repassword": "123456",
     "gender": "male",
-    "userName": "madenmustafa"
+    "username": "maden1234",
+    "name" : "Mustafa",
+    "surname": "Maden"
+}
+
+//Kullanıcı profil sayfası
+###
+GET  {{BASE_URL}}/users/myprofile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTA1MzZlMjdkNjA3YTRkNTgxOTZlNGQiLCJpYXQiOjE2Mjc3MzE4MzUsImV4cCI6MTYyNzc2NzgzNX0.17aiYwQmPOzLxVpvLi0_Fqq3QCuLt_kFr-AXhxuxBlo
+
+{
+
+}
+
+
+//Kullanıcı profil sayfası güncelleme
+###
+PATCH   {{BASE_URL}}/users/myprofile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTA1MzZlMjdkNjA3YTRkNTgxOTZlNGQiLCJpYXQiOjE2Mjc3MzE4MzUsImV4cCI6MTYyNzc2NzgzNX0.17aiYwQmPOzLxVpvLi0_Fqq3QCuLt_kFr-AXhxuxBlo
+
+{
+    "chatChannel": "asd1@gmail.com"
 }
 
 
@@ -53,6 +69,20 @@ Content-Type: application/json
 
 
 
+
+
+
+
+###
+GET {{BASE_URL}}
+
+###
+GET  {{BASE_URL}}/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTA1MjhiZTIzZWUzZDNmOGNhZGUyODkiLCJpYXQiOjE2Mjc3MjgxMzYsImV4cCI6MTYyNzc2NDEzNn0.ABX71lObKqdUV7bo7K_hMzwI2hhXEttIqC6qbNoKstM
+
+
+###
+GET  {{BASE_URL}}/users/52
 
 
 ###
@@ -64,7 +94,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYxYTUzZ
     "isim": "maden2sd",
     "sifre": "123456"
 }
-
 
 
 ###

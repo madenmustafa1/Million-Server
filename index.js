@@ -1,10 +1,10 @@
 const express = require("express")
-require("./db/dbConnection")
-const errorMiddleware = require("./middleware/errorMiddleware")
+require("./src/db/dbConnection")
+const errorMiddleware = require("./src/middleware/errorMiddleware")
 
 
 //Router
-const userRouter = require("./router/userRouter")
+const userRouter = require("./src/router/userRouter")
 
 
 
