@@ -5,13 +5,6 @@ const error = (err, req, res, next) => {
     //console.log(err)
 
 
-    // if(err == "JsonWebTokenError: invalid token"){
-    //     //console.log("aaaaa"+ err + "ERRROOOOOOOOOOOOooooooR")
-    //     console.log("ASDASDASDASDASDASDASDASD")
-    //     err.message = "Geçersiz token"
-    //     err.status.code = 400
-    // }
-
 
     if(err.code === 11000){
         
